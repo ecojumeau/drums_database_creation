@@ -47,6 +47,10 @@ ADD CONSTRAINT `marca_pieza`
   ON DELETE NO ACTION
   ON UPDATE CASCADE;
 
+ALTER TABLE `drums`.`piezas`
+ADD COLUMN `nombre` VARCHAR(100) NOT NULL AFTER `id`,
+DROP COLUMN `marca`;
+
 -- Next table 'baterias'
 CREATE TABLE `drums`.`baterias` (
   `id` INT NOT NULL AUTO_INCREMENT,
