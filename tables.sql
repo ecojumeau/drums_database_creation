@@ -53,6 +53,18 @@ ALTER TABLE `drums`.`piezas`
 ADD COLUMN `nombre` VARCHAR(100) NOT NULL AFTER `id`,
 DROP COLUMN `marca`;
 
+-- Changing the table 'piezas' to add a foreign key'
+ALTER TABLE `drums`.`piezas` 
+CHANGE COLUMN `distribuidor` `distribuidor_id` INT NOT NULL AFTER `marca_id`,
+ADD INDEX `distribuidor_pieza_idx` (`distribuidor_id` ASC) VISIBLE;
+
+ALTER TABLE `drums`.`piezas` 
+ADD CONSTRAINT `distribuidor_pieza`
+  FOREIGN KEY (`distribuidor_id`)
+  REFERENCES `drums`.`distribuidores` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE;
+
 -- Next table 'baterias'
 CREATE TABLE `drums`.`baterias` (
   `id` INT NOT NULL AUTO_INCREMENT,
@@ -64,6 +76,7 @@ CREATE TABLE `drums`.`baterias` (
   `marca_id` INT NOT NULL,
   PRIMARY KEY (`id`)); -- The primary key
 
+-- Making some adjustments to the table 
 ALTER TABLE `drums`.`baterias` 
 ADD INDEX `marca_bateria_idx` (`marca_id` ASC) VISIBLE; -- Foreign key for table 'marcas'
 
@@ -71,6 +84,18 @@ ALTER TABLE `drums`.`baterias`
 ADD CONSTRAINT `marca_bateria`
   FOREIGN KEY (`marca_id`)
   REFERENCES `drums`.`marcas` (`id`)
+  ON DELETE NO ACTION
+  ON UPDATE CASCADE;
+  
+ALTER TABLE `drums`.`baterias` 
+DROP COLUMN `marca`, -- Drop this column because it already has the 'marca_id' column
+CHANGE COLUMN `distribuidor` `distribuidor_id` INT NOT NULL , -- Rename this column to make it a foreign key
+ADD INDEX `distribuidor_bateria_idx` (`distribuidor_id` ASC) VISIBLE;
+;
+ALTER TABLE `drums`.`baterias` 
+ADD CONSTRAINT `distribuidor_bateria`
+  FOREIGN KEY (`distribuidor_id`) 
+  REFERENCES `drums`.`distribuidores` (`id`) -- Asigning the foreign key
   ON DELETE NO ACTION
   ON UPDATE CASCADE;
   
