@@ -22,6 +22,8 @@ CREATE TABLE `drums`.`distribuidor` (
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8;
 
+ALTER TABLE distribuidor RENAME TO distribuidores;
+
 -- Creating the next table named 'piezas'
 CREATE TABLE `drums`.`piezas` (
   `id` INT NOT NULL AUTO_INCREMENT,
