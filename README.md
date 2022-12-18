@@ -9,31 +9,31 @@ The data will be about drums, some of the information will contain data for type
 
 Entity “baterias”:
 
-[](./images/baterias.png)
+[![baterias.png](https://i.postimg.cc/ncWrQpLb/baterias.png)](https://postimg.cc/QHph2L50)
 
 Entity “marcas”:
 
-[](./images/marcas.png)
+[![marcas.png](https://i.postimg.cc/0jBkm0Pd/marcas.png)](https://postimg.cc/q62HHntz)
 
 Entity “piezas”:
 
-[](./images/piezas.png)
+[![piezas.png](https://i.postimg.cc/rynFvMx0/piezas.png)](https://postimg.cc/F1S4StPN)
 
 Entity “distribuidores”:
 
-[](./images/distribuidores.png)
+[![distribuidores.png](https://i.postimg.cc/x1HfJm7M/distribuidores.png)](https://postimg.cc/9Dm5sDcQ)
 
 ## Relations
 
 Now I create the relations between the tables, after I assign the cardinality to have a better understanding and clearness of the database.
 
-[](./images/relations.png)
+[![relations.png](https://i.postimg.cc/tTrpQNZQ/relations.png)](https://postimg.cc/DJbt1sPB)
 
 ## Entity Relation Diagram (ERD)
 
 Now that I have more clarity about the data lets see the ERD of the database. This is just the first model of the database.
 
-[](./images/er_diagram.png)
+[![er-diagram.png](https://i.postimg.cc/kXR9z87z/er-diagram.png)](https://postimg.cc/8jGqr7Jm)
 
 Now this is the final diagram of the database created.
-[](./drums_ERD.png)
+[ERD](drums_ERD.png)
