@@ -35,5 +35,4 @@ Now that I have more clarity about the data lets see the ERD of the database. Th
 
 [![er-diagram.png](https://i.postimg.cc/kXR9z87z/er-diagram.png)](https://postimg.cc/8jGqr7Jm)
 
-Now this is the final diagram of the database created.
-[ERD](drums_ERD.png)
+Now this is the final diagram of the database created :point_right: : [ERD](drums_ERD.png)
